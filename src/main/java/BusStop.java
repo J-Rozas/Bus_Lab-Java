@@ -25,4 +25,9 @@ public class BusStop {
     public void remove(Person person) {
         this.queue.remove(person);
     }
+
+    public ArrayList<Person> getPassengersObjects() {
+        return this.queue;
+    }
+
 }
