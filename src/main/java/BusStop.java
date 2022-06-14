@@ -9,4 +9,8 @@ public class BusStop {
         this.name = name;
         this.queue = new ArrayList<>();
     }
+
+    public String getName() {
+        return this.name;
+    }
 }
