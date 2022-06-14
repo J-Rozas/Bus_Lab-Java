@@ -8,7 +8,7 @@ public class Bus {
     public Bus(String destination, int capacity) {
         this.destination = destination;
         this.capacity = capacity;
-        this.passengers = new ArrayList<>(0);
+        this.passengers = new ArrayList<>();
     }
 
     public int getPassengers() {
