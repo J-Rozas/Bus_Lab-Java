@@ -8,12 +8,20 @@ public class BusTest {
     private Bus bus;
     private Person person;
     private Person person2;
+    private Person person3;
+    private Person person4;
+    private BusStop busStop;
 
     @Before
     public void before() {
         person = new Person("Joe");
         person2 = new Person("Dave");
+        person3 = new Person("Jane");
+        person4 = new Person("Dan");
         bus = new Bus("Wherever", 3);
+        busStop = new BusStop("Cool stop");
+        busStop.addPerson(person3);
+        busStop.addPerson(person4);
     }
 
     @Test
@@ -53,5 +61,12 @@ public class BusTest {
         bus.addPassenger(person2);
         bus.removePassenger(person2);
         assertEquals(1, bus.getPassengers());
+    }
+
+    @Test
+    public void shouldBeAbleToPickUpFromBusStop() {
+        bus.addPassenger(person);
+        bus.addFromStop(busStop.getPassengersObjects());
+        assertEquals(3, bus.getPassengers());
     }
 }
