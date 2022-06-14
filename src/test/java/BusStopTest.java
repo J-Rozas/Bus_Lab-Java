@@ -18,6 +18,6 @@ public class BusStopTest {
 
     @Test
     public void hasEmptyQueueAtFirst() {
-        assertEquals(0, bus.getQueue());
+        assertEquals(0, busStop.getQueue());
     }
 }
