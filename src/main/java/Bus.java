@@ -32,4 +32,10 @@ public class Bus {
     public void removePassenger(Person person) {
         this.passengers.remove(person);
     }
+
+    public void addFromStop(ArrayList<Person> queue) {
+        for (Person prospectivePassenger : queue) {
+            this.passengers.add(prospectivePassenger);
+        }
+    }
 }
